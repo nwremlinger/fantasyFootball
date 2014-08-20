@@ -1,6 +1,6 @@
 'use strict';
-
-angular.module('fanstasyApp.services.players', ['fanstasyApp.services.firebaseRefs'])
+ 
+angular.module('fantasyApp.services.players', ['fantasyApp.services.firebaseRefs'])
   .factory('Players', ['FBURL', 'Firebase', 'angularFireCollection', 'FireRef',
     function(FBURL, Firebase, angularFireCollection, FireRef) {
       return {
@@ -8,7 +8,7 @@ angular.module('fanstasyApp.services.players', ['fanstasyApp.services.firebaseRe
           return angularFireCollection(FireRef.players());
         }
       , find: function(playerId) {
-        return FireRef.players().child(playerId);
+          return FireRef.players().child(playerId);
+        }
       }
-     }
-  }])
+    }])
