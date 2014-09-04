@@ -12,7 +12,7 @@
       <th>Position</th>
       <th>Team</th>
     </tr>
-    <tr data-ng-repeat="player in players | filter:search | limitTO:searchsize.limit">
+    <tr data-ng-repeat="player in players | filter:search | filter:strictsearch:true | limitTo:searchsize.limit">
       <td>{{ player.name }}<span data-ng-show="player.num"> - #{{ player.num }}</span></td>
       <td>{{ positions[player.pos].abbr }}</td>
       <td>{{ nflteams[player.team].abbr }}</td>
